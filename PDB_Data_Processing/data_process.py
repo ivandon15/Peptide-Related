@@ -8,10 +8,12 @@ Including:
 5. Calculate the similarity using Blosum62/90 between 2 sequences
 6. Convert the second structure files provided by DSSP to dictionary
 7. Extract consecutive second structure
+8. Calculate two pdbs' RMSD (C-alpha alignment)
 """
 import json
 import math
 import os
+import pathlib
 from collections import defaultdict
 import warnings
 from pymol import cmd
@@ -397,3 +399,24 @@ def screenEpart(pdb_path, epart_json, output_file):
 
                 with open(output_file, "a") as f:
                     f.write(", ".join(candidate_pdb) + "\n")
+
+
+def calculateRMSD(origin_file, predict_file):
+    """
+    Calculate two pdbs' RMSD (C-alpha alignment)
+    :param origin_file: pdb file
+    :param predict_file: pdb file
+    :return: rmsd value
+    """
+    origin_name = pathlib.Path(origin_file).stem
+    predict_name = pathlib.Path(predict_file).stem
+    print(origin_file, predict_file)
+    cmd.load(origin_file)
+    cmd.load(predict_file)
+
+    cmd.select("originlayer", "model " + origin_name)
+    cmd.select("predictlayer", "model " + predict_name)
+
+    output = cmd.align("predictlayer////CA", "originlayer////CA")
+    cmd.delete("all")
+    return output[0]
