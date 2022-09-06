@@ -20,5 +20,9 @@ Contains some peptide data utils tool and some models or tasks related to peptid
     6. Convert the second structure files   provided by DSSP to dictionary
     7. Extract consecutive second structure
     8. Calculate two pdbs' RMSD (C-alpha alignment)
+
 ## Simple Cycpep Prediction Rosetta
 Usage about simple_cycpep_predict from Rosetta(in chinese), more details please see the readme in this folder.
+
+## Cell Penetrating Peptide
+Using 3D Infomax Pre-trained model to predict CPP.
