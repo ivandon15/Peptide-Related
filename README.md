@@ -25,4 +25,4 @@ Contains some peptide data utils tool and some models or tasks related to peptid
 Usage about simple_cycpep_predict from Rosetta(in chinese), more details please see the readme in this folder.
 
 ## Cell Penetrating Peptide
-Using 3D Infomax Pre-trained model to predict CPP.
+Using 3D Infomax Pre-trained model(ref to https://github.com/HannesStark/3DInfomax) to predict CPP.
