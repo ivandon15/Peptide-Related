@@ -1,4 +1,5 @@
-# Peptide Data Process Utils
+# Peptide Related
+Contains some peptide data utils tool and some models or tasks related to peptides.
 
 ## Cyclic Peptide Related
 1. filter_cyclic_peptide.py: You can use this py to find the cyclic postion of one sequence by using its PDB file

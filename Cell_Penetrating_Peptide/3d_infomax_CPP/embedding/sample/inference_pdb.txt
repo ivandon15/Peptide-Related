@@ -1,0 +1,2 @@
+D:\Work_Study\Work\Syneron\Code\CPP\github\3d_infomax_CPP\embedding\sample\molecular_pdb\DSN.pdb
+D:\Work_Study\Work\Syneron\Code\CPP\github\3d_infomax_CPP\embedding\sample\molecular_pdb\MED.pdb
