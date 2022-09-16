@@ -88,6 +88,7 @@ def getCyclic(pdbfile, ss="", check_type="disulfide"):
                     except ValueError:
                         continue
     cmd.delete('all')
+    cmd.reinitialize()
 
 
 def splitHGI(ss):

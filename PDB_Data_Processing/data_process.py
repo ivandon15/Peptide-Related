@@ -419,4 +419,5 @@ def calculateRMSD(origin_file, predict_file):
 
     output = cmd.align("predictlayer////CA", "originlayer////CA")
     cmd.delete("all")
+    cmd.reinitialize()
     return output[0]
