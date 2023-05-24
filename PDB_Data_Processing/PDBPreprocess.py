@@ -42,7 +42,8 @@ class ChainResidueSelect(Select):
 
     # uncomment this if you want the peptides only contains
     # standard amino acides
-    # def accept_residue(self, residue):
+    # if you just want exclude that contains small molecule, delete `standard` 
+    # def accept_residue(self, residue,standard=True):
     #     # filter standard aa
     #     return is_aa(residue)
 
